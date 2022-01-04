@@ -7,10 +7,11 @@ const Joi = require("joi");
 const admin = require("firebase-admin");
 admin.initializeApp();
 
-app.use(cors({
-    origin : "https://oeson.in",
-    methods : ['POST']
-}));
+// app.use(cors({
+//     origin : "https://oeson.in",
+//     methods : ['POST']
+// }));
+app.use(cors());
 app.use(express.json());
 
 const requestFormat = Joi.object().keys({
